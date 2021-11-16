@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Use link tags to include fonts from third party libraries like Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Animation Demo</title>
+  </head>
+  <body>
+    <!-- Star Wars theme audio file -->
+    <audio id="audio" src="./assets/star-wars-theme.mp3"></audio>
+
+    <!-- Header section -->
+    <section class="header">
+      <h1 class="header__title">CSS Typography</h1>
+      <h1 class="header__title">& Animations</h1>
+      <h2 class="header__tagline">May the force be with you</h2>
+      <h2 class="header__symbols header__symbols--large">!</h2>
+      <div class="header__cohorts">
+        <div class="header__cohorts--single">
+          <h3 class="header__symbols header__symbols--medium">v</h3>
+          <p class="header__cohorts--name">Palm</p>
+        </div>
+        <div class="header__cohorts--single">
+          <h3 class="header__symbols header__symbols--medium">x</h3>
+          <p class="header__cohorts--name">Mountain</p>
+        </div>
+        <div class="header__cohorts--single">
+          <h3 class="header__symbols header__symbols--medium">m</h3>
+          <p class="header__cohorts--name">Lake</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV section -->
+    <section class="tv">
+      <!-- Antenna -->
+      <div class="tv__antenna"></div>
+
+      <!-- TV box -->
+      <div class="tv__box">
+        <div class="tv__screen--outer">
+          <div class="tv__screen--inner">
+            <div class="logo"></div>
+          </div>
+        </div>
+
+        <!-- TV controls -->
+        <div class="tv__controls">
+          <div class="tv__controls--top">
+            <div class="tv__dial tv__dial--power">
+              <div class="tv__knob" id="knob-one"></div>
+            </div>
+            <div class="tv__volume">
+              <div class="tv__dial tv__dial--sound" onclick="playAudio()"></div>
+              <div class="tv__dial tv__dial--mute" onclick="pauseAudio()"></div>
+            </div>
+          </div>
+          <div class="tv__controls--bottom">
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+            <div class="tv__vent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Attribution -->
+    <footer class="attribution">
+      <p>
+        Distant Galaxy fonts provided by
+        <a href="https://www.fontspace.com/sf-distant-galaxy-font-f6436"
+          >font space</a
+        >.
+      </p>
+      <p>
+        Roboto font provided by
+        <a href="https://fonts.google.com/">Google fonts</a>.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

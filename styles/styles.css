@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@font-face {
+  src: url("../../assets/fonts/SfDistantGalaxy-0l3d.ttf");
+  font-family: "Distant Galaxy";
+}
+@font-face {
+  font-family: "Distant Galaxy Alternate";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Alternate Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternateItalic-3RDM.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Alternate Outline";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternateItalic-3RDM.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Alternate Outline Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyAltoutlineItalic-ZJDZ.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyItalic-WV3Y.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Outline";
+  src: url("../../assets/fonts/SfDistantGalaxyOutline-xoeO.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Outline Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyOutlineItalic-4yA4.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Symbols";
+  src: url("../../assets/fonts/SfDistantGalaxySymbols-aylE.ttf");
+}
+@font-face {
+  font-family: "Distant Galaxy Symbols Italic";
+  src: url("../../assets/fonts/SfDistantGalaxySymbolsItalic-EXv9.ttf");
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes spin-on {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes spin-on {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes fly {
+  from {
+    background-size: 16rem;
+    visibility: visible;
+  }
+  to {
+    background-size: 0rem;
+    visibility: visible;
+  }
+}
+@keyframes fly {
+  from {
+    background-size: 16rem;
+    visibility: visible;
+  }
+  to {
+    background-size: 0rem;
+    visibility: visible;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1358db;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  color: white;
+  position: relative;
+  margin-top: 2rem;
+}
+.header__title {
+  font-family: "Distant Galaxy";
+  font-size: 3rem;
+  letter-spacing: 7px;
+  line-height: 1.5;
+}
+.header__tagline {
+  position: absolute;
+  z-index: 1;
+  top: 14rem;
+  font-family: "Distant Galaxy Outline Italic";
+  font-size: 2rem;
+  -webkit-animation: fade-in 1.5s ease-in, pulse 7s infinite 1.5s;
+          animation: fade-in 1.5s ease-in, pulse 7s infinite 1.5s;
+}
+.header__symbols {
+  font-family: "Distant Galaxy Symbols";
+}
+.header__symbols--large {
+  color: #ffcf00;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 10px 0.5rem black);
+  font-size: 10rem;
+}
+.header__symbols--medium {
+  font-size: 3rem;
+}
+
+.header__cohorts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40rem;
+  height: 11.5rem;
+  margin-bottom: 2rem;
+}
+.header__cohorts--single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcf00;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.header__cohorts--single:hover {
+  transform: rotate(360deg);
+  width: 8.5rem;
+  height: 8.5rem;
+  filter: drop-shadow(0 10px 0.5rem black);
+}
+.header__cohorts--name {
+  font-family: "Distant Galaxy";
+}
+
+.tv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tv__antenna {
+  height: 8rem;
+  width: 8rem;
+  background-image: radial-gradient(circle closest-side at 50% 12%, #b9b9b9 0%, #181817 250%);
+  border-radius: 50%;
+}
+.tv__box {
+  height: 25rem;
+  width: 40rem;
+  border-radius: 1rem;
+  background-color: #674623;
+  background: #aa7339;
+  background: radial-gradient(circle, #aa7339 0%, #3c2915 61%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 1rem;
+  margin-top: -6rem;
+}
+.tv__screen--outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 85%;
+  border-top: 3rem solid #756e67;
+  border-right: 3rem solid #a79e96;
+  border-bottom: 3rem solid #8e857d;
+  border-left: 3rem solid #a79e96;
+  border-radius: 1rem;
+}
+.tv__screen--inner {
+  width: 180%;
+  height: 109%;
+  border: 0.25rem solid black;
+  border-radius: 50%/5%;
+  background: radial-gradient(circle, #b9b9b9 -2%, #181817 100%);
+}
+
+.logo {
+  height: 16rem;
+  background-color: black;
+  background-image: url("../assets/brainwars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  visibility: hidden;
+  -webkit-animation: fly 10s linear infinite 2.5s;
+          animation: fly 10s linear infinite 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tv__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 24%;
+  height: 95%;
+}
+.tv__controls--top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50%;
+  width: 90%;
+  border-radius: 1rem;
+  background: #e9dcd0;
+  background: linear-gradient(180deg, #e9dcd0 0%, #b4aaa1 54%);
+}
+.tv__controls--bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+}
+
+.tv__dial--power {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: #d5c8bb;
+  background: linear-gradient(90deg, #d5c8bb 0%, #988f87 76%);
+  transform: rotate(-45deg);
+  -webkit-animation: spin-on 0.5s 2s;
+          animation: spin-on 0.5s 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tv__volume {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.tv__dial--sound, .tv__dial--mute {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #2abd39;
+  background: radial-gradient(circle, #2abd39 0%, #1c7d26 65%);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.tv__dial--sound:hover, .tv__dial--mute:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}
+
+.tv__dial--mute {
+  background: #bd2a2a;
+  background: radial-gradient(circle, #bd2a2a 0%, #7d1c1c 65%);
+}
+
+.tv__knob {
+  width: 0.75rem;
+  height: 90%;
+  background-color: #ccc0b6;
+  border-radius: 50%/15%;
+}
+
+.tv__vent {
+  width: 90%;
+  height: 5px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.attribution {
+  color: white;
+  font-family: Roboto, sans serif;
+  margin: 2rem auto;
+}
+.attribution a {
+  text-decoration: none;
+  color: #ffcf00;
+  font-weight: 900;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+.attribution a:visited {
+  color: #ffcf00;
+}/*# sourceMappingURL=styles.css.map */

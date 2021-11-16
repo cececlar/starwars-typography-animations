@@ -1,0 +1,274 @@
+// Import partials here!
+@use "./partials/colors" as *;
+@use "./partials/typography";
+@use "./partials/animations" as *;
+@use "./partials/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+body {
+  @include center(column);
+  background-color: $bst-blue;
+}
+
+.header {
+  @include center(column);
+  width: 60rem;
+  color: white;
+  position: relative;
+  margin-top: 2rem;
+
+  &__title {
+    // Style typography here
+    font-family: "Distant Galaxy";
+    font-size: 3rem;
+    letter-spacing: 7px;
+    line-height: 1.5;
+  }
+
+  &__tagline {
+    position: absolute;
+    z-index: 1;
+    top: 14rem;
+    // Style typography here
+    font-family: "Distant Galaxy Outline Italic";
+    font-size: 2rem;
+    // Invoke @keyframes animation here
+    animation: fade-in 1.5s ease-in, pulse 7s infinite 1.5s;
+  }
+
+  &__symbols {
+    // Style typography here
+    font-family: "Distant Galaxy Symbols";
+
+    &--large {
+      color: $bst-yellow;
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 10px 0.5rem black);
+      // Style typography here
+      font-size: 10rem;
+    }
+
+    &--medium {
+      // Style typography here
+      font-size: 3rem;
+    }
+  }
+}
+
+.header__cohorts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40rem;
+  height: 11.5rem;
+  margin-bottom: 2rem;
+
+  &--single {
+    @include center(column);
+    background-color: $bst-yellow;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    // Add transition here
+    transition: 0.5s;
+
+    &:hover {
+      // Add transition properties on hover here
+      transform: rotate(360deg);
+      width: 8.5rem;
+      height: 8.5rem;
+      filter: drop-shadow(0 10px 0.5rem black);
+    }
+  }
+
+  &--name {
+    // Style typography here
+    font-family: "Distant Galaxy";
+  }
+}
+
+.tv {
+  @include center(column);
+
+  &__antenna {
+    height: 8rem;
+    width: 8rem;
+    background-image: radial-gradient(
+      circle closest-side at 50% 12%,
+      rgba(185, 185, 185, 1) 0%,
+      rgba(24, 24, 23, 1) 250%
+    );
+    border-radius: 50%;
+  }
+
+  &__box {
+    height: 25rem;
+    width: 40rem;
+    border-radius: 1rem;
+    background-color: $tv-wood;
+    background: rgb(170, 115, 57);
+    background: radial-gradient(
+      circle,
+      rgba(170, 115, 57, 1) 0%,
+      rgba(60, 41, 21, 1) 61%
+    );
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1rem;
+    margin-top: -6rem;
+  }
+
+  &__screen--outer {
+    @include center(row);
+    width: 70%;
+    height: 85%;
+    border-top: 3rem solid #756e67;
+    border-right: 3rem solid #a79e96;
+    border-bottom: 3rem solid #8e857d;
+    border-left: 3rem solid #a79e96;
+    border-radius: 1rem;
+  }
+
+  &__screen--inner {
+    width: 180%;
+    height: 109%;
+    border: 0.25rem solid $tv-dark;
+    border-radius: 50% / 5%;
+    background: radial-gradient(
+      circle,
+      rgba(185, 185, 185, 1) -2%,
+      rgba(24, 24, 23, 1) 100%
+    );
+  }
+}
+
+.logo {
+  height: 16rem;
+  background-color: $tv-dark;
+  background-image: url("../assets/brainwars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  visibility: hidden;
+  // Invoke @keyframes animation here
+  animation: fly 10s linear infinite 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.tv__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 24%;
+  height: 95%;
+
+  &--top {
+    @include space-evenly(column);
+    height: 50%;
+    width: 90%;
+    border-radius: 1rem;
+    background: rgb(233, 220, 208);
+    background: linear-gradient(
+      180deg,
+      rgba(233, 220, 208, 1) 0%,
+      rgba(180, 170, 161, 1) 54%
+    );
+  }
+
+  &--bottom {
+    @include space-evenly(column);
+    width: 100%;
+    height: 33%;
+  }
+}
+
+.tv__dial--power {
+  @include center(row);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgb(213, 200, 187);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 200, 187, 1) 0%,
+    rgba(152, 143, 135, 1) 76%
+  );
+  // Transform element and invoke @keyframes animation here
+  transform: rotate(-45deg);
+  animation: spin-on 0.5s 2s;
+  animation-fill-mode: forwards;
+}
+
+.tv__volume {
+  @include space-evenly(row);
+  width: 100%;
+}
+
+.tv__dial--sound {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgb(42, 189, 57);
+  background: radial-gradient(
+    circle,
+    rgba(42, 189, 57, 1) 0%,
+    rgba(28, 125, 38, 1) 65%
+  );
+  border-radius: 50%;
+  // Add transition here
+  transition: 0.5s;
+  &:hover {
+    // Add transition properties on hover here
+    cursor: pointer;
+    filter: brightness(130%);
+  }
+}
+
+.tv__dial--mute {
+  @extend .tv__dial--sound;
+  background: rgb(189, 42, 42);
+  background: radial-gradient(
+    circle,
+    rgba(189, 42, 42, 1) 0%,
+    rgba(125, 28, 28, 1) 65%
+  );
+}
+
+.tv__knob {
+  width: 0.75rem;
+  height: 90%;
+  background-color: $tv-controls;
+  border-radius: 50% / 15%;
+}
+
+.tv__vent {
+  width: 90%;
+  height: 5px;
+  background-color: $tv-dark;
+  border-radius: 3px;
+}
+
+.attribution {
+  color: white;
+  font-family: Roboto, sans serif;
+  margin: 2rem auto;
+  a {
+    text-decoration: none;
+    color: $bst-yellow;
+    font-weight: 900;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $bst-yellow;
+    }
+  }
+}

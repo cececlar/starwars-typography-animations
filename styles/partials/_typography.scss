@@ -1,0 +1,55 @@
+// Use @import to include fonts from third party font libraries like Google Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+// Use @font-face to include fonts from your assets directory
+
+@font-face {
+  src: url("../../assets/fonts/SfDistantGalaxy-0l3d.ttf");
+  font-family: "Distant Galaxy";
+}
+
+@font-face {
+  font-family: "Distant Galaxy Alternate";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Alternate Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternateItalic-3RDM.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Alternate Outline";
+  src: url("../../assets/fonts/SfDistantGalaxyAlternateItalic-3RDM.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Alternate Outline Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyAltoutlineItalic-ZJDZ.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyItalic-WV3Y.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Outline";
+  src: url("../../assets/fonts/SfDistantGalaxyOutline-xoeO.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Outline Italic";
+  src: url("../../assets/fonts/SfDistantGalaxyOutlineItalic-4yA4.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Symbols";
+  src: url("../../assets/fonts/SfDistantGalaxySymbols-aylE.ttf");
+}
+
+@font-face {
+  font-family: "Distant Galaxy Symbols Italic";
+  src: url("../../assets/fonts/SfDistantGalaxySymbolsItalic-EXv9.ttf");
+}
